@@ -1,0 +1,143 @@
+.robot-eye-left {
+  animation: robot-left-eye 3s infinite alternate;
+}
+
+@keyframes robot-left-eye {
+  from {
+    transform: scale(1);
+    transform: rotate(180deg);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
+
+.robot-eye-right {
+  animation: robot-right-eye 3s infinite;
+}
+
+@keyframes robot-right-eye {
+  0% {
+    top: 0;
+    right: 0;
+  }
+  25% {
+    top: 0;
+    right: 170px;
+  }
+  50% {
+    top: 170px;
+    right: 170px;
+  }
+  75% {
+    top: 170px;
+    right: 0;
+  }
+  100% {
+    top: 0;
+    right: 0;
+  }
+}
+
+.robot-ear-left {
+  animation: robot-ear-left 4s infinite, robot-ear-left-move 5s infinite;
+}
+
+@keyframes robot-ear-left {
+  to {
+    opacity: 0;
+  }
+}
+
+.robot-ear-right {
+  animation: robot-ear-right 3s infinite;
+}
+
+@keyframes robot-ear-right {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(60px);
+    opacity: 0;
+  }
+}
+
+.robot-nose:hover {
+  transition: 3s;
+  transform: rotate(180deg);
+}
+
+.robot-teeth {
+  animation: robot-teeth 1s infinite linear, robot-teeth2 1s infinite alternate;
+}
+
+@keyframes robot-teeth {
+  0% {
+    transform: skewX(-15deg);
+  }
+  5% {
+    transform: skewX(15deg);
+  }
+  10% {
+    transform: skewX(-15deg);
+  }
+  15% {
+    transform: skewX(15deg);
+  }
+  20% {
+    transform: skewX(0deg);
+  }
+  100% {
+    transform: skewX(0deg);
+  }
+}
+
+@keyframes robot-teeth2 {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(5px, 5px) rotate(5deg);
+  }
+  50% {
+    transform: translate(0, 0) rotate(0eg);
+  }
+  75% {
+    transform: translate(-5px, 5px) rotate(-5deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
+
+.robot-hair-style {
+  aspect-ratio: 1.8;
+  background-color: black;
+  --c: no-repeat linear-gradient(to bottom, #f00, #0f0, rgb(252, 227, 0), #00f);
+  background: var(--c) 0% 100%, var(--c) 20% 100%, var(--c) 40% 100%,
+    var(--c) 60% 100%, var(--c) 80% 100%, var(--c) 100% 100%;
+  background-size: 20% 65%;
+  animation: robot-hair-style 1s infinite linear;
+}
+
+@keyframes robot-hair-style {
+  0% {
+    background-size: 20% 100%, 20% 100%, 20% 100%;
+  }
+  20% {
+    background-size: 20% 60%, 20% 100%, 20% 100%;
+  }
+  40% {
+    background-size: 20% 80%, 20% 60%, 20% 100%;
+  }
+  60% {
+    background-size: 20% 100%, 20% 80%, 20% 60%;
+  }
+  80% {
+    background-size: 20% 100%, 20% 100%, 20% 80%;
+  }
+  100% {
+    background-size: 20% 100%, 20% 100%, 20% 100%;
+  }
+}
